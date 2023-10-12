@@ -1,0 +1,38 @@
+{
+    "title":"Customer_360",
+    "owner": "Ishmin Singh",
+    "tier": "Gold",
+    "version": "v1.1",
+    "version_date":"July 17, 2023 13:00",
+    "description":"Customer data from various sources, enabling a holistic view of customers. ",
+    "tags":["marketing", "customer.360"],
+    "Health":{
+        "quality_score":"70%",
+        "operational_health": "70%"
+    },
+    "governance":{
+        "access_policies": 3,
+        "data_policies": 3
+    },
+    "stacks":["flare", "benthos", "alpha"],
+    "document":"What is it?\nThe Customer 360 is a tool designed to create a comprehensive view of customers by combining data from multiple sources. It includes information centered around a customer and further associated details of stores, products, and transaction details. \n\nWhat does it solve? \nCustomer 360 addresses the challenge of aggregating and analyzing customer-related data from disparate sources. By consolidating data into a unified format, it enables users to gain valuable insights into customer behavior, purchase patterns, and preferences. This comprehensive view empowers teams to make data-driven decisions. \nUse Cases \n• Customer Analytics: Businesses can gain insights into customer behavior, identify high-value customers, and personalize marketing strategies. \n• Inventory Management: By understanding product preferences and demand patterns, companies can optimize their inventory and restocking processes.\n• Fraud Detection: Analyzing customer orders and transaction data can help identify suspicious activities or potential fraud.\n• Personalization Opportunities: By understanding individual customer preferences and purchase habits, businesses can personalize marketing efforts, promotions, and product recommendations, enhancing customer satisfaction and loyalty. \n• Demand and Inventory Insights: Analyzing purchase patterns can provide valuable insights into demand for specific products or services, enabling businesses to optimize inventory management and restocking strategies. \n• Event-Driven Marketing: Businesses can leverage streaming data to trigger event-driven marketing campaigns. For example, sending personalized offers or promotions based on specific customer actions, such as completing a large purchase. \n\nKey Features \n• Advanced analytics\n Built with \n\nWhat libraries and frameworks does it use? \n• Python: For data processing, transformation, and integration tasks. \nApache Kafka: To enable real-time streaming of customer order events. \nApache Spark: For handling large-scale data processing efficiently. \nPostgreSQL: As the primary database to store the enriched order data. ",
+    "data_sources":[
+        {
+            "title":"customers",
+            "description":"Contains customer information, including customer_index, name, contact details, and other relevant attributes. "
+        },
+        {
+            "title":"stores",
+            "description":"Provides data about various stores, including store_index, location, and store attributes."
+        },
+        {
+            "title":"products",
+            "description":"Contains details of different products, including product_index, name, description, and product attributes. "
+        },
+        {
+            "title":"transactions",
+            "description":"Holds transaction data, including transaction_index, transaction_date, transaction_line_item, and transaction details."
+        }
+    ]
+
+}
