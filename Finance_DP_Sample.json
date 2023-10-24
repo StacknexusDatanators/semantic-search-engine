@@ -1,0 +1,37 @@
+{
+    "title": "Banking_360",
+    "owner": "Alexandra Mitchell",
+    "tier": "Diamond",
+    "version": "v2.0",
+    "version_date": "November 15, 2023 10:45",
+    "description": "Comprehensive banking data integration platform for a unified view of customer financial profiles and transactions.",
+    "tags": ["banking", "financial_data", "customer_insights"],
+    "Health": {
+        "quality_score": "80%",
+        "operational_health": "85%"
+    },
+    "governance": {
+        "access_policies": 4,
+        "data_policies": 4
+    },
+    "stacks": ["bankflow", "secureDB", "analyticsX"],
+    "document": "What is it?\nThe Banking 360 is a platform designed to aggregate and analyze banking-related data, providing a holistic view of customer financial profiles, transactions, and interactions. It empowers financial institutions to enhance customer experiences, optimize operations, and make data-driven decisions.\n\nWhat does it solve?\nBanking 360 addresses the challenge of managing and understanding vast amounts of banking data. By consolidating and analyzing this data, it enables banks to offer personalized services, detect fraudulent activities, and streamline operational processes.\nUse Cases\n• Customer Engagement: Provides insights into customer behavior, preferences, and financial needs, enabling personalized services and product recommendations.\n• Fraud Detection: Analyzes transaction patterns to identify and prevent fraudulent activities, ensuring the security of customer accounts.\n• Operational Efficiency: Optimizes banking processes, including loan approvals, risk assessments, and compliance checks.\n• Regulatory Compliance: Ensures adherence to banking regulations and data privacy standards.\n• Credit Risk Management: Analyzes customer credit profiles and transaction history to assess credit risk and inform lending decisions.\n\nKey Features\n• Real-time Transaction Monitoring\n• Customer Segmentation\n• Risk Analytics\n• Regulatory Reporting\n\nWhat technologies does it use?\n• Apache Kafka: Enables real-time streaming of banking events and transactions.\n• SQL Server: Relational database for secure storage of sensitive financial data.\n• Python: Utilized for data processing, analytics, and machine learning.\n• Tableau: Data visualization for actionable insights and reporting.\n",
+    "data_sources": [
+        {
+            "title": "customer_accounts",
+            "description": "Contains customer financial profiles, account balances, and transaction history."
+        },
+        {
+            "title": "transactions",
+            "description": "Holds detailed information about banking transactions, including dates, amounts, and transaction types."
+        },
+        {
+            "title": "credit_scores",
+            "description": "Provides credit scores and risk assessment data for customers."
+        },
+        {
+            "title": "compliance_records",
+            "description": "Includes data related to regulatory compliance, audits, and legal requirements."
+        }
+    ]
+}
