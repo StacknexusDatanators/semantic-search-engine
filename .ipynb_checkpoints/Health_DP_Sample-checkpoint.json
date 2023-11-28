@@ -1,0 +1,37 @@
+{
+    "title": "Healthcare_360",
+    "owner": "Dr. Amanda Rodriguez",
+    "tier": "Platinum",
+    "version": "v1.0",
+    "version_date": "October 24, 2023 09:30",
+    "description": "Comprehensive healthcare data integration platform for a unified view of patient records and medical information.",
+    "tags": ["healthcare", "patient_records", "medical_data"],
+    "Health": {
+        "quality_score": "85%",
+        "operational_health": "90%"
+    },
+    "governance": {
+        "access_policies": 4,
+        "data_policies": 4
+    },
+    "stacks": ["flare", "benthos", "alpha"],
+    "document": "What is it?\nThe Healthcare 360 is a platform designed to aggregate and analyze healthcare-related data, providing a holistic view of patient records and medical information. It enables healthcare professionals to make informed decisions by consolidating data from diverse sources into a unified and easily accessible format.\n\nWhat does it solve?\nHealthcare 360 addresses the challenge of managing and analyzing patient data scattered across different systems. By unifying this data, it facilitates better patient care, streamlined processes, and improved decision-making for healthcare providers.\nUse Cases\n• Patient Care Optimization: Healthcare professionals can access a comprehensive view of patient history, diagnoses, and treatments, leading to more personalized and effective care.\n• Operational Efficiency: The platform streamlines administrative processes, reducing paperwork and enhancing the overall efficiency of healthcare institutions.\n• Medical Research: Researchers can leverage aggregated data for medical studies, clinical trials, and epidemiological research.\n• Regulatory Compliance: Ensures adherence to healthcare data privacy regulations and provides robust access controls for sensitive patient information.\n\nKey Features\n• Interoperability\n• Secure Data Sharing\n• Advanced Analytics\n• Electronic Health Record (EHR) Integration\n\nWhat technologies does it use?\n• HL7 FHIR: For healthcare data exchange and interoperability.\n• Docker: Containerization for scalable and portable deployment.\n• MongoDB: NoSQL database for flexible storage of medical data.\n• TensorFlow: Machine learning for predictive analytics in healthcare.\n",
+    "data_sources": [
+        {
+            "title": "patient_records",
+            "description": "Contains comprehensive patient information, including medical history, diagnoses, treatments, and personal details."
+        },
+        {
+            "title": "medical_procedures",
+            "description": "Provides data on medical procedures, including procedure codes, descriptions, and associated healthcare professionals."
+        },
+        {
+            "title": "healthcare_providers",
+            "description": "Contains information about healthcare providers, including names, specialties, and contact details."
+        },
+        {
+            "title": "billing_records",
+            "description": "Holds billing and insurance information, including billing codes, insurance claims, and payment records."
+        }
+    ]
+}

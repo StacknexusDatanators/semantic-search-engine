@@ -1,0 +1,79 @@
+{
+    "title": "Customer_360",
+    "description": "Customer data from various sources, enabling a holistic view of customers.",
+    "owners": "Ishmin Singh",
+    "version": "v1.1",
+    "version_date": "July 17, 2023",
+    "tags": ["marketing","customer_360"],
+    "health": {
+        "quality_score": "70%",
+        "operational_health": "70%"
+    },
+    "data_sources": {
+        "table": [
+            {
+            "title": "customers",
+            "description": "Contains customer information, including customer_index, name, contact details, and other relevant attributes.",
+            "version": "v2.0",
+            "version_date": "july 15, 2023",
+            "workflow": {
+                  "title": "Customer wrokflow",
+                  "description": "Automated workflow for processing and analyzing customer data",
+                  "datasets": {
+                      "source": "3rdparty",
+                      "source_name": "customer_data.csv"
+                  },
+                  "streaming": false,
+                  "last_run": "November 18, 2023"
+              },
+              "quality_score": "78%",
+              "completeness": "95%",
+              "recency": "Daily",
+              "frequency": "Real-time",
+              "schema": 
+                  [
+                    {
+                      "title": "customer_id",
+                      "data_type": "string"
+                    },
+                    {
+                      "title": "customer_name",
+                      "data_type": "string"
+                    }
+                ]
+        },
+        {
+            "title": "stores",
+            "description": "Provides data about various stores, including store_index, location, and store attributes.",
+            "version": "v2.0",
+            "version_date": "august 20,2023"
+          },
+          {
+            "title": "products",
+            "description": "Contains details of different products, including product_index, name, description, and product attributes.",
+            "version": "v3.0",
+            "version_date": "july 18, 2023"
+          },
+          {
+            "title": "transactions",
+            "description": "Holds transaction data, including transaction_index, transaction_date, transaction_line_item, and transaction details.",
+            "version": "v2.0",
+            "version_date": "july 30, 2023"
+          }
+        ]
+    },
+    
+    "lens": {
+        "name": "Customer Insights Lens",
+        "description": "Provides insights into customer behavior and preferences.",
+        "stack": ["spark", "python", "SQL"],
+        "tags": ["insights", "analytics"],
+        "published": "October 1, 2023",
+        "updated_at": "November 20, 2023",
+        "version": "v1.2",
+        "entities": {
+          "entity_1": "Customer Profiles",
+          "entity_2": "Purchase History"
+        }
+      }
+    }
