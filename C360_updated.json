@@ -39,7 +39,16 @@
                     {
                       "title": "customer_name",
                       "data_type": "string"
-                    }
+                    },
+                    {
+                      "title":"email",
+                      "data_type":"string"
+                    },
+                    {
+                      "title":"phone_number",
+                      "data_type":"string"
+                    },
+                    {}
                 ]
         },
         {
