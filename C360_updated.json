@@ -33,42 +33,267 @@
               "schema": 
                   [
                     {
-                      "title": "customer_id",
+                      "title": "first_name",
                       "data_type": "string"
                     },
                     {
-                      "title": "customer_name",
+                      "title": "last_name",
                       "data_type": "string"
                     },
                     {
-                      "title":"email",
+                      "title":"gender",
                       "data_type":"string"
                     },
                     {
                       "title":"phone_number",
                       "data_type":"string"
                     },
-                    {}
+                    {
+                      "title": "email",
+                      "data_type": "string"
+                    },
+                    {
+                      "title": "birth_date",
+                      "data_type": "timestamp"
+                    },
+                    {
+                      "title":"age",
+                      "data_type":"int"
+                    },
+                    {
+                      "title":"education_level",
+                      "data_type":"string"
+                    },
+                    {
+                      "title": "maritial_status",
+                      "data_type": "string"
+                    },
+                    {
+                      "title": "number_of_children",
+                      "data_type": "int"
+                    },
+                    {
+                      "title": "register_date",
+                      "data_type": "timestamp"
+                    },
+                    {
+                      "title":"occupation",
+                      "data_type":"string"
+                    },
+                    {
+                      "title":"annual_income",
+                      "data_type":"string"
+                    },
+                    {
+                      "title": "hobbies",
+                      "data_type": "string"
+                    },
+                    {
+                      "title": "degree_of_loyalty",
+                      "data_type": "string"
+                    },
+                    {
+                      "title":"social_class",
+                      "data_type":"string"
+                    },
+                    {
+                      "title":"mailing_street",
+                      "data_type":"string"
+                    },{
+                      "title": "city",
+                      "data_type": "string"
+                    },
+                    {
+                      "title": "state",
+                      "data_type": "string"
+                    },
+                    {
+                      "title":"country",
+                      "data_type":"string"
+                    },
+                    {
+                      "title":"zip_code",
+                      "data_type":"string"
+                    },
+                    {
+                      "title": "customer_id",
+                      "data_type": "string"
+                    }
                 ]
         },
         {
-            "title": "stores",
-            "description": "Provides data about various stores, including store_index, location, and store attributes.",
-            "version": "v2.0",
-            "version_date": "august 20,2023"
+          "title": "clickstream",
+          "description": "Contains clickstream information, including sessionid, clientid, prodcut details, and other relevant attributes.",
+          "version": "v3.0",
+          "version_date": "August 20, 2023",
+          "workflow": {
+                "title": "Clickstream wrokflow",
+                "description": "Automated workflow for processing and analyzing clickstream data",
+                "datasets": {
+                    "source": "3rdparty",
+                    "source_name": "clickstream.csv"
+                },
+                "streaming": false,
+                "last_run": "November 28, 2023"
+            },
+            "quality_score": "73%",
+            "completeness": "97%",
+            "recency": "Daily",
+            "frequency": "Real-time",
+            "schema": 
+                [
+                  {
+                    "title": "sessionid",
+                    "data_type": "string"
+                  },
+                  {
+                    "title": "clientid",
+                    "data_type": "string"
+                  },
+                  {
+                    "title":"visitorid",
+                    "data_type":"string"
+                  },
+                  {
+                    "title":"visit_start_time",
+                    "data_type":"timestamp"
+                  },
+                  {
+                    "title": "prodcut_price",
+                    "data_type": "double"
+                  },
+                  {
+                    "title": "product_quantity",
+                    "data_type": "int"
+                  },
+                  {
+                    "title":"product_revenue",
+                    "data_type":"double"
+                  },
+                  {
+                    "title":"product_refund_amount",
+                    "data_type":"double"
+                  },
+                  {
+                    "title": "traffic_channel",
+                    "data_type": "string"
+                  }
+              ]
+      },
+      {
+        "title": "order_line_item",
+        "description": "Contains order line item information, including orderid, order datetime, and other relevant attributes.",
+        "version": "v2.0",
+        "version_date": "August 28, 2023",
+        "workflow": {
+              "title": "order_line_item workflow",
+              "description": "Automated workflow for processing and analyzing order_line_item data",
+              "datasets": {
+                  "source": "3rdparty",
+                  "source_name": "order_line_item.csv"
+              },
+              "streaming": false,
+              "last_run": "November 17, 2023"
           },
-          {
-            "title": "products",
-            "description": "Contains details of different products, including product_index, name, description, and product attributes.",
-            "version": "v3.0",
-            "version_date": "july 18, 2023"
-          },
-          {
-            "title": "transactions",
-            "description": "Holds transaction data, including transaction_index, transaction_date, transaction_line_item, and transaction details.",
-            "version": "v2.0",
-            "version_date": "july 30, 2023"
-          }
+          "quality_score": "76%",
+          "completeness": "92%",
+          "recency": "Daily",
+          "frequency": "Real-time",
+          "schema": 
+              [
+                {
+                  "title": "order_id",
+                  "data_type": "string"
+                },
+                {
+                  "title": "retailer_id",
+                  "data_type": "int"
+                },
+                {
+                  "title":"order_datetime",
+                  "data_type":"string"
+                },
+                {
+                  "title":"inline_item_number",
+                  "data_type":"int"
+                },
+                {
+                  "title": "prodcut_ids",
+                  "data_type": "string"
+                },
+                {
+                  "title": "quantities",
+                  "data_type": "int"
+                },
+                {
+                  "title":"version",
+                  "data_type":"string"
+                },
+                {
+                  "title":"_ts",
+                  "data_type":"timestamp"
+                }
+            ]
+    },
+    {
+      "title": "product_details",
+      "description": "Contains products detailed information, including sku_id, product_category, model_name, and other relevant attributes.",
+      "version": "v3.0",
+      "version_date": "July 28, 2023",
+      "workflow": {
+            "title": "product_details wrokflow",
+            "description": "Automated workflow for processing and analyzing products_details data",
+            "datasets": {
+                "source": "3rdparty",
+                "source_name": "product_details.csv"
+            },
+            "streaming": false,
+            "last_run": "November 13, 2023"
+        },
+        "quality_score": "81%",
+        "completeness": "92%",
+        "recency": "Daily",
+        "frequency": "Real-time",
+        "schema": 
+            [
+              {
+                "title": "sku_id",
+                "data_type": "string"
+              },
+              {
+                "title": "product_category",
+                "data_type": "string"
+              },
+              {
+                "title":"product_category_id",
+                "data_type":"string"
+              },
+              {
+                "title":"product_subcategory",
+                "data_type":"string"
+              },
+              {
+                "title": "prodcut_subcategory_id",
+                "data_type": "string"
+              },
+              {
+                "title": "model_name",
+                "data_type": "string"
+              },
+              {
+                "title":"model_id",
+                "data_type":"string"
+              },
+              {
+                "title":"brand_name",
+                "data_type":"string"
+              },
+              {
+                "title": "brand_id",
+                "data_type": "string"
+              }
+          ]
+  }
         ]
     },
     
