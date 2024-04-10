@@ -1,0 +1,228 @@
+{
+    "title": "Healthcare_360",
+    "description": "Comprehensive healthcare data integration platform for a unified view of patient records and medical information.",
+    "owner": "Dr. Amanda Rodriguez",
+    "version": "v1.0",
+    "version_date": "October 24, 2023 09:30",
+    "tags": ["healthcare", "patient_records", "medical_data"],
+    "health": {
+        "quality_score": "85%",
+        "operational_health": "90%"
+    },
+    "data_sources": [
+        {
+            "title": "patient_records",
+            "description": "Contains comprehensive patient information, including medical history, diagnoses, treatments, and personal details.",
+            "version": "v1.2",
+            "version_date": "October 22, 2023",
+            "quality_score": "88%",
+            "completeness": "95%",
+            "recency": "Daily",
+            "frequency": "Real-time",
+            "schema": [
+                {
+                    "title": "patient_id",
+                    "data_type": "string"
+                },
+                {
+                    "title": "first_name",
+                    "data_type": "string"
+                },
+                {
+                    "title": "last_name",
+                    "data_type": "string"
+                },
+                {
+                    "title": "gender",
+                    "data_type": "string"
+                },
+                {
+                    "title": "dob",
+                    "data_type": "timestamp"
+                },
+                {
+                    "title": "blood_type",
+                    "data_type": "string"
+                },
+                {
+                    "title": "allergies",
+                    "data_type": "string"
+                },
+                {
+                    "title": "conditions",
+                    "data_type": "string"
+                },
+                {
+                    "title": "medications",
+                    "data_type": "string"
+                },
+                {
+                    "title": "insurance_provider",
+                    "data_type": "string"
+                },
+                {
+                    "title": "primary_doctor",
+                    "data_type": "string"
+                },
+                {
+                    "title": "contact_details",
+                    "data_type": "string"
+                }
+            ]
+        },
+        {
+            "title": "medical_procedures",
+            "description": "Provides data on medical procedures, including procedure codes, descriptions, and associated healthcare professionals.",
+            "version": "v1.0",
+            "version_date": "October 20, 2023",
+            "quality_score": "82%",
+            "completeness": "90%",
+            "recency": "Weekly",
+            "frequency": "Real-time",
+            "schema": [
+                {
+                    "title": "procedure_id",
+                    "data_type": "string"
+                },
+                {
+                    "title": "patient_id",
+                    "data_type": "string"
+                },
+                {
+                    "title": "procedure_date",
+                    "data_type": "timestamp"
+                },
+                {
+                    "title": "procedure_code",
+                    "data_type": "string"
+                },
+                {
+                    "title": "procedure_description",
+                    "data_type": "string"
+                },
+                {
+                    "title": "performing_doctor",
+                    "data_type": "string"
+                },
+                {
+                    "title": "department",
+                    "data_type": "string"
+                },
+                {
+                    "title": "hospital",
+                    "data_type": "string"
+                }
+            ]
+        },
+        {
+            "title": "healthcare_providers",
+            "description": "Contains information about healthcare providers, including names, specialties, and contact details.",
+            "version": "v1.1",
+            "version_date": "October 23, 2023",
+            "quality_score": "90%",
+            "completeness": "97%",
+            "recency": "Daily",
+            "frequency": "Real-time",
+            "schema": [
+                {
+                    "title": "provider_id",
+                    "data_type": "string"
+                },
+                {
+                    "title": "name",
+                    "data_type": "string"
+                },
+                {
+                    "title": "specialty",
+                    "data_type": "string"
+                },
+                {
+                    "title": "contact_details",
+                    "data_type": "string"
+                },
+                {
+                    "title": "hospital_affiliation",
+                    "data_type": "string"
+                }
+            ]
+        },
+        {
+            "title": "billing_records",
+            "description": "Holds billing and insurance information, including billing codes, insurance claims, and payment records.",
+            "version": "v1.0",
+            "version_date": "October 25, 2023",
+            "quality_score": "86%",
+            "completeness": "92%",
+            "recency": "Daily",
+            "frequency": "Real-time",
+            "schema": [
+                {
+                    "title": "transaction_id",
+                    "data_type": "string"
+                },
+                {
+                    "title": "patient_id",
+                    "data_type": "string"
+                },
+                {
+                    "title": "billing_date",
+                    "data_type": "timestamp"
+                },
+                {
+                    "title": "billing_code",
+                    "data_type": "string"
+                },
+                {
+                    "title": "amount",
+                    "data_type": "double"
+                },
+                {
+                    "title": "insurance_claim",
+                    "data_type": "string"
+                },
+                {
+                    "title": "payment_status",
+                    "data_type": "string"
+                }
+            ]
+        }
+    ],
+    "technical_specifications": {
+        "Interoperability": {
+            "description": "Facilitates seamless data exchange between different healthcare systems and applications.",
+            "standards": ["HL7 FHIR"]
+        },
+        "Secure Data Sharing": {
+            "description": "Ensures secure and compliant sharing of healthcare data among authorized users and systems."
+        },
+        "Advanced Analytics": {
+            "description": "Utilizes advanced analytical techniques to derive insights from healthcare data for better decision-making."
+        },
+        "Electronic Health Record (EHR) Integration": {
+            "description": "Integrates with electronic health record systems to provide a comprehensive view of patient health information."
+        }
+    },
+    "governance_policies_and_stewardship": {
+        "description": "Establishes policies and roles for effective data governance and stewardship."
+    },
+    "data_quality_and_governance": {
+        "quality_measures_and_standards": {
+            "description": "Ensures high-quality healthcare data through rigorous measures and adherence to standards.",
+            "approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and confidentiality."
+        }
+    },
+    "use_cases_and_scenarios": {
+        "Patient_Care_Optimization": {
+            "description": "Healthcare professionals can access a comprehensive view of patient history, diagnoses, and treatments, leading to more personalized and effective care."
+        },
+        "Operational_Efficiency": {
+            "description": "The platform streamlines administrative processes, reducing paperwork and enhancing the overall efficiency of healthcare institutions."
+        },
+        "Medical_Research": {
+            "description": "Researchers can leverage aggregated data for medical studies, clinical trials, and epidemiological research."
+        },
+        "Regulatory_Compliance": {
+            "description": "Ensures adherence to healthcare data privacy regulations and provides robust access controls for sensitive patient information."
+        }
+    }
+}

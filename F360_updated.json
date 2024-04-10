@@ -1,0 +1,250 @@
+{
+    "title": "Retail_360",
+    "description": "Comprehensive retail data integration platform for a unified view of customer shopping behaviors, inventory management, and sales performance.",
+    "owners": "Elena Rodriguez",
+    "version": "v1.0",
+    "version_date": "April 10, 2024",
+    "tags": ["retail", "customer_insights", "sales"],
+    "health": {
+        "quality_score": "75%",
+        "operational_health": "80%"
+    },
+    "data_sources": {
+        "customer_transactions": {
+            "title": "Customer Transactions",
+            "description": "Contains customer purchase history, including products bought, purchase dates, and transaction amounts.",
+            "version": "v1.5",
+            "version_date": "April 5, 2024",
+            "workflow": {
+                "title": "Customer Transactions Workflow",
+                "description": "Automated workflow for processing and analyzing customer transaction data.",
+                "datasets": {
+                    "source": "POS system",
+                    "source_name": "customer_transactions.csv"
+                },
+                "streaming": false,
+                "last_run": "April 8, 2024"
+            },
+            "quality_score": "80%",
+            "completeness": "90%",
+            "recency": "Daily",
+            "frequency": "Real-time",
+            "schema": [
+                {"title": "transaction_id", "data_type": "string"},
+                {"title": "customer_id", "data_type": "string"},
+                {"title": "product_id", "data_type": "string"},
+                {"title": "quantity", "data_type": "int"},
+                {"title": "unit_price", "data_type": "double"},
+                {"title": "total_amount", "data_type": "double"},
+                {"title": "transaction_date", "data_type": "timestamp"}
+            ]
+        },
+        "inventory_management": {
+            "title": "Inventory Management",
+            "description": "Stores inventory data, including stock levels, product SKUs, and warehouse locations.",
+            "version": "v1.2",
+            "version_date": "April 7, 2024",
+            "workflow": {
+                "title": "Inventory Management Workflow",
+                "description": "Automated workflow for processing and managing inventory data.",
+                "datasets": {
+                    "source": "ERP system",
+                    "source_name": "inventory_data.csv"
+                },
+                "streaming": false,
+                "last_run": "April 9, 2024"
+            },
+            "quality_score": "85%",
+            "completeness": "95%",
+            "recency": "Hourly",
+            "frequency": "Real-time",
+            "schema": [
+                {"title": "product_id", "data_type": "string"},
+                {"title": "product_name", "data_type": "string"},
+                {"title": "stock_level", "data_type": "int"},
+                {"title": "location", "data_type": "string"}
+            ]
+        },
+        "sales_performance": {
+            "title": "Sales Performance",
+            "description": "Holds detailed information about sales performance, including revenue, profit margins, and sales channels.",
+            "version": "v1.3",
+            "version_date": "April 8, 2024",
+            "workflow": {
+                "title": "Sales Performance Workflow",
+                "description": "Automated workflow for analyzing sales performance data.",
+                "datasets": {
+                    "source": "CRM system",
+                    "source_name": "sales_data.csv"
+                },
+                "streaming": false,
+                "last_run": "April 9, 2024"
+            },
+            "quality_score": "78%",
+            "completeness": "90%",
+            "recency": "Daily",
+            "frequency": "Real-time",
+            "schema": [
+                {"title": "transaction_id", "data_type": "string"},
+                {"title": "customer_id", "data_type": "string"},
+                {"title": "product_id", "data_type": "string"},
+                {"title": "revenue", "data_type": "double"},
+                {"title": "profit_margin", "data_type": "double"},
+                {"title": "sales_channel", "data_type": "string"}
+            ]
+        }
+    },
+    "lens": {
+        "name": "Retail Insights Lens",
+        "description": "Provides insights into customer shopping behaviors, inventory trends, and sales performance.",
+        "stack": ["Spark", "Python", "SQL"],
+        "tags": ["insights", "analytics"],
+        "published": "April 10, 2024",
+        "updated_at": "April 10, 2024",
+        "version": "v1.0",
+        "entities": {
+            "entity_1": "Customer Transactions",
+            "entity_2": "Inventory Management",
+            "entity_3": "Sales Performance"
+        }
+    },
+    "system_requirements_and_dependencies": {
+        "compute_cluster": {
+            "title": "Compute Cluster",
+            "description": "Utilized for large-scale data processing and analytics tasks.",
+            "details": {
+                "type": "Apache Spark",
+                "number_of_nodes": 5,
+                "node_type": "High-memory instances",
+                "total_cpu_cores": 80,
+                "total_ram": "320 GB"
+            }
+        },
+        "message_broker": {
+            "title": "Message Broker",
+            "description": "Facilitates real-time data streaming and event processing.",
+            "details": {
+                "type": "Apache Kafka",
+                "number_of_brokers": 3,
+                "broker_instance_type": "Instance type with at least 8 CPU cores and 32 GB RAM per broker",
+                "total_cpu_cores": 24,
+                "total_ram": "96 GB"
+            }
+        },
+        "data_warehouse": {
+            "title": "Data Warehouse",
+            "description": "Stores structured and unstructured data for analysis and reporting.",
+            "details": {
+                "type": "Snowflake",
+                "instance_type": "Virtual warehouse",
+                "total_compute_nodes": 2,
+                "compute_node_type": "Compute-optimized",
+                "total_storage": "1 TB"
+            }
+        }
+    },
+    "built_using": {
+        "python": {
+            "title": "Python",
+            "description": "For data processing, analytics, and machine learning tasks."
+        },
+        "apache_kafka": {
+            "title": "Apache Kafka",
+            "description": "For real-time data streaming and event processing."
+        },
+        "apache_spark": {
+            "title": "Apache Spark",
+            "description": "For large-scale data processing and analytics."
+        },
+        "sql": {
+            "title": "SQL",
+            "description": "For querying and analyzing structured data."
+        }
+    },
+    "technical_specifications": {
+        "Retail 360 Lens": {
+            "title": "Retail 360 Lens",
+            "description": "Empowers retailers with comprehensive insights into customer behaviors and sales trends.",
+            "features": {
+                "Customer Segmentation": "Analyzes customer transaction data to segment customers based on shopping behaviors and preferences.",
+                "Inventory Forecasting": "Predicts demand and optimizes inventory levels to prevent stockouts and minimize excess inventory.",
+                "Sales Trend Visualization": "Visualizes sales data to identify trends, patterns, and opportunities for growth.",
+                "Marketing Campaign Analytics": "Evaluates the effectiveness of marketing campaigns and identifies strategies for improvement."
+            }
+        },
+        "Customer Segmentation": {
+            "title": "Customer Segmentation",
+            "description": "Analyzes customer purchase history to segment customers for targeted marketing and personalized recommendations.",
+            "usage": "Identifies customer segments based on shopping behaviors, demographics, and preferences."
+        },
+        "Inventory Forecasting": {
+            "title": "Inventory Forecasting",
+            "description": "Predicts demand for products and optimizes inventory levels to ensure adequate stock availability and minimize storage costs.",
+            "usage": "Helps retailers avoid stockouts and overstock situations by forecasting demand accurately."
+        },
+        "Sales Trend Visualization": {
+            "title": "Sales Trend Visualization",
+            "description": "Visualizes sales data to identify trends, patterns, and outliers for informed decision-making.",
+            "usage": "Enables retailers to understand sales performance across different products, regions, and time periods."
+        },
+        "Marketing Campaign Analytics": {
+            "title": "Marketing Campaign Analytics",
+            "description": "Analyzes the effectiveness of marketing campaigns and provides insights to optimize marketing strategies.",
+            "usage": "Measures campaign performance metrics such as conversion rates, ROI, and customer engagement."
+        }
+    },
+    "governance_policies_and_stewardship": {
+        "title": "Governance Policies and Stewardship",
+        "description": "Establishes policies and roles for effective data governance and stewardship.",
+        "access_control": {
+            "role_based_access": "Granting access based on roles to maintain data security.",
+            "discretionary_access": "Implementing discretionary access control and masking PII for privacy."
+        },
+        "steward_responsibilities": {
+            "title": "Steward Responsibilities",
+            "description": "Defining roles and responsibilities for data ownership and stewardship.",
+            "responsibilities": [
+                "Clear assignment of ownership and oversight roles.",
+                "Appointing stewards to ensure data quality and integrity."
+            ]
+        }
+    },
+    "data_quality_and_governance": {
+        "quality_measures_and_standards": {
+            "title": "Quality Measures and Standards",
+            "description": "Ensures high-quality data through rigorous measures and adherence to standards.",
+            "approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and uniqueness.",
+            "audits_and_feedback": "Regular audits and feedback mechanisms to continuously enhance data quality."
+        }
+    },
+    "cleansing_and_preprocessing": {
+        "title": "Cleansing and Preprocessing",
+        "description": "Thorough cleaning and preprocessing procedures to ensure data integrity.",
+        "processes": [
+            "Addressing missing values, outliers, and inconsistencies.",
+            "Standardization, normalization, and duplicate record elimination.",
+            "Transforming and aggregating data for coherence.",
+            "Utilizing advanced algorithms for imputation and encoding."
+        ]
+    },
+    "use_cases_and_scenarios": {
+        "business_analysis_use_cases": [
+            {
+                "title": "Customer Segmentation",
+                "description": "Utilize customer transaction data to segment customers based on shopping behaviors and preferences."
+            },
+            {
+                "title": "Inventory Optimization",
+                "description": "Predict demand and optimize inventory levels to prevent stockouts and minimize excess inventory."
+            },
+            {
+                "title": "Sales Performance Analysis",
+                "description": "Analyze sales data to identify trends, patterns, and opportunities for growth."
+            },
+            {
+                "title": "Marketing Effectiveness",
+                "description": "Evaluate the effectiveness of marketing campaigns and identify strategies for improvement."
+            }
+        ]
+    }
+}

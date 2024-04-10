@@ -296,7 +296,6 @@
   }
         ]
     },
-    
     "lens": {
         "name": "Customer Insights Lens",
         "description": "Provides insights into customer behavior and preferences.",
@@ -309,5 +308,218 @@
           "entity_1": "Customer Profiles",
           "entity_2": "Purchase History"
         }
+      },
+      "System_Requirements_and_Dependencies": {
+        "Compute_Cluster": {
+          "Title": "Compute Cluster",
+          "Description": "Utilized Apache Spark for large-scale data processing.",
+          "Details": {
+            "Type": "Apache Spark",
+            "Number_of_Nodes": 3,
+            "Node_Type": "High-memory instances (e.g., r5.4xlarge)",
+            "Total_CPU_Cores": 48,
+            "Total_RAM": "192 GB"
+          }
+        },
+        "Apache_Kafka_Cluster": {
+          "Title": "Apache Kafka Cluster",
+          "Description": "Employed Apache Kafka for real-time streaming of events.",
+          "Details": {
+            "Number_of_Brokers": 3,
+            "Broker_Instance_Type": "Instance type with at least 8 CPU cores and 32 GB RAM per broker.",
+            "Total_CPU_Cores": 24,
+            "Total_RAM": "96 GB"
+          }
+        },
+        "PostgreSQL_Database": {
+          "Title": "PostgreSQL Database",
+          "Description": "Utilized PostgreSQL as the primary database for storing enriched data.",
+          "Details": {
+            "Instance_Type": "High-memory instance (e.g., r5.xlarge)",
+            "CPU_Cores": "At least 4",
+            "RAM": "At least 16 GB",
+            "Storage": "Enough capacity to handle the 'orders_enriched_data' dataset."
+          }
+        }
+      },
+      "Built_Using": {
+        "Python": {
+          "Title": "Python",
+          "Description": "For data processing, transformation, and integration tasks."
+        },
+        "Apache_Kafka": {
+          "Title": "Apache Kafka",
+          "Description": "To enable real-time streaming of customer order events."
+        },
+        "Apache_Spark": {
+          "Title": "Apache Spark",
+          "Description": "For handling large-scale data processing efficiently."
+        },
+        "PostgreSQL": {
+          "Title": "PostgreSQL",
+          "Description": "As the primary database to store the enriched order data."
+        }
+      },
+      "TechnicalSpecifications": {
+        "Customer 360 Lens": {
+          "Title": "Customer 360 Lens",
+          "Description": "Empowers businesses with comprehensive customer insights.",
+          "Features": {
+            "Recency Frequency and Monitoring (RFM) Analysis": "Employs RFM analysis to understand customer behavior and tailor marketing strategies effectively."
+          }
+        },
+        "Recency": {
+          "Title": "Recency",
+          "Description": "Analyzes recent customer engagements for targeted marketing.",
+          "Usage": "Identifies active customers for immediate engagement strategies."
+        },
+        "Frequency": {
+          "Title": "Frequency",
+          "Description": "Analyzes customer engagement consistency for loyalty programs.",
+          "Usage": "Identifies highly engaged customers for retention strategies."
+        },
+        "Monitoring": {
+          "Title": "Monitoring",
+          "Description": "Continuously tracks customer transactions for revenue optimization.",
+          "Usage": "Identifies high-value customers for personalized strategies."
+        },
+        "Columns": {
+          "Customer": {
+            "Title": "Customer",
+            "Description": "Attributes related to customer information for analysis.",
+            "Attributes": [
+              { "Attribute": "customer_id", "Description": "Unique identifier of the customer" },
+              { "Attribute": "first_name", "Description": "First name of the customer" },
+              { "Attribute": "last_name", "Description": "Last name of the customer" },
+              { "Attribute": "birth_date", "Description": "Birth date of the customer" },
+              { "Attribute": "gender", "Description": "Gender of the customer" },
+              { "Attribute": "marital_status", "Description": "Marital status of the customer" },
+              { "Attribute": "hobbies", "Description": "Hobbies of the customer" },
+              { "Attribute": "annual_income", "Description": "Annual income of the customer" },
+              { "Attribute": "email_id", "Description": "Email address of the customer" },
+              { "Attribute": "phone_number", "Description": "Contact number of the customer" },
+              { "Attribute": "mailing_street", "Description": "Postal address of the customer" },
+              { "Attribute": "country", "Description": "Country name" },
+              { "Attribute": "state", "Description": "State code of the customer's address" },
+              { "Attribute": "city", "Description": "City name" },
+              { "Attribute": "zip_code", "Description": "ZIP code associated with the customer's address" },
+              { "Attribute": "register_date", "Description": "Registration date of the customer" }
+            ]
+          },
+          "Product Views": {
+            "Title": "Product Views",
+            "Description": "Attributes related to product viewing activities for analysis.",
+            "Attributes": [
+              { "Attribute": "session_id", "Description": "Session identifier of the activity event" },
+              { "Attribute": "activity_uuid", "Description": "Unique identifier of the activity event" },
+              { "Attribute": "visit_start_ts", "Description": "Timestamp of the session start" },
+              { "Attribute": "entity_id", "Description": "Customer identifier" },
+              { "Attribute": "product_sku", "Description": "Product identifier" },
+              { "Attribute": "traffic_channel", "Description": "User acquisition channel" },
+              { "Attribute": "event_action", "Description": "Event action for the activity" }
+            ]
+          },
+          "Items Added to Favorite": {
+            "Title": "Items Added to Favorite",
+            "Description": "Attributes related to favorited items by customers for analysis.",
+            "Attributes": [
+              { "Attribute": "session_id", "Description": "Session identifier of the activity event" },
+              { "Attribute": "activity_uuid", "Description": "Unique identifier of the activity event" },
+              { "Attribute": "entity_id", "Description": "Customer identifier" },
+              { "Attribute": "product_sku", "Description": "Product identifier" }
+            ]
+          },
+          "Items Added to Cart": {
+            "Title": "Items Added to Cart",
+            "Description": "Attributes related to items added to cart by customers for analysis.",
+            "Attributes": [
+              { "Attribute": "session_id", "Description": "Session identifier of the activity event" },
+              { "Attribute": "activity_uuid", "Description": "Unique identifier of the activity event" },
+              { "Attribute": "entity_id", "Description": "Customer identifier" },
+              { "Attribute": "product_sku", "Description": "Product identifier" },
+              { "Attribute": "quantity", "Description": "Quantity of the order" }
+            ]
+          },
+          "Order Placed": {
+            "Title": "Order Placed",
+            "Description": "Attributes related to orders placed by customers for analysis.",
+            "Attributes": [
+              { "Attribute": "session_id", "Description": "Session identifier of the activity event" },
+              { "Attribute": "activity_uuid", "Description": "Unique identifier of the activity event" },
+              { "Attribute": "entity_id", "Description": "Customer identifier" },
+              { "Attribute": "product_sku", "Description": "Product identifier" },
+              { "Attribute": "order_value", "Description": "Sales value of the order" },
+              { "Attribute": "transaction_id", "Description": "Transaction identifier" }
+            ]
+          },
+          "Segment": {
+            "Title": "Segment",
+            "Description": "Attributes related to customer segmentation for targeted marketing.",
+            "Attributes": [
+              { "Attribute": "segment_name", "Description": "Name of the audience segment" },
+              { "Attribute": "customer_id", "Description": "Unique identifier of the customer" }
+            ]
+          }
+        }
+      },
+      "GovernancePoliciesAndStewardship": {
+        "Title": "Governance Policies and Stewardship",
+        "Description": "Establishing policies and roles for effective data governance and stewardship.",
+        "AccessControl": {
+          "RoleBasedAccess": "Granting access based on roles to maintain data security.",
+          "DiscretionaryAccess": "Implementing discretionary access control and masking PII for privacy."
+        },
+        "StewardResponsibilities": {
+          "Title": "Steward Responsibilities",
+          "Description": "Defining roles and responsibilities for data ownership and stewardship.",
+          "Responsibilities": [
+            "Clear assignment of ownership and oversight roles.",
+            "Appointing stewards to ensure data quality and integrity."
+          ]
+        }
+      },
+      "DataQualityAndGovernance": {
+        "QualityMeasuresAndStandards": {
+          "Title": "Quality Measures and Standards",
+          "Description": "Ensuring high-quality data through rigorous measures and adherence to standards.",
+          "Approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and uniqueness.",
+          "AuditsAndFeedback": "Regular audits and feedback mechanisms to continuously enhance data quality."
+        }
+      },
+      "CleansingAndPreprocessing": {
+        "Title": "Cleansing and Preprocessing",
+        "Description": "Thorough cleaning and preprocessing procedures to ensure data integrity.",
+        "Processes": [
+          "Addressing missing values, outliers, and inconsistencies.",
+          "Standardization, normalization, and duplicate record elimination.",
+          "Transforming and aggregating data for coherence.",
+          "Utilizing advanced algorithms for imputation and encoding."
+        ]
+      },
+      "UseCasesAndScenarios": {
+        "BusinessAnalysisUseCases": [
+          {
+            "Title": "Personalized Marketing Campaigns",
+            "Description": "Analyze customer preferences and behavior to tailor marketing campaigns for increased engagement and conversion rates."
+          },
+          {
+            "Title": "Customer Segmentation",
+            "Description": "Utilize segmentation models to categorize customers based on demographics and behaviors, optimizing targeted marketing strategies."
+          },
+          {
+            "Title": "Churn Prediction and Retention Strategies",
+            "Description": "Implement predictive analytics to identify at-risk customers and devise proactive retention strategies, reducing churn rates."
+          },
+          {
+            "Title": "Sales Performance Analysis",
+            "Description": "Evaluate sales data to identify top-performing products, optimize pricing strategies, and enhance overall sales performance."
+          },
+          {
+            "Title": "Customer Satisfaction Analysis",
+            "Description": "Analyze customer feedback and support interactions to assess satisfaction levels and improve customer service strategies."
+          }
+        ]
       }
-    }
+
+
+    
