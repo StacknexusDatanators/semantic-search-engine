@@ -1,139 +1,226 @@
 {
     "title": "Finance_360",
-    "description": "Financial data from various sources, enabling a comprehensive view of financial transactions and investments.",
-    "owners": "John Doe",
-    "version": "v1.0",
+    "description": "Financial data platform aggregating information from various sources for a comprehensive view of finances.",
+    "owners": ["John Doe", "Jane Smith"],
+    "version": "v2.0",
     "version_date": "April 15, 2024",
-    "tags": ["finance", "investment"],
+    "tags": ["finance", "banking", "investment"],
     "health": {
-        "quality_score": "75%",
-        "operational_health": "75%"
+        "quality_score": "90%",
+        "operational_health": "95%",
+        "data_freshness": "Real-time",
+        "data_coverage": "Comprehensive"
     },
     "data_sources": {
-        "bank_transactions": {
-            "title": "Bank Transactions",
-            "description": "Contains detailed bank transaction information, including transaction dates, amounts, and transaction types.",
-            "version": "v2.0",
+        "account_information": {
+            "title": "Account Information",
+            "description": "Detailed information about financial accounts, including balances, transactions, and account types.",
+            "version": "v2.5",
             "version_date": "April 10, 2024",
             "workflow": {
-                "title": "Bank Transactions Workflow",
-                "description": "Automated workflow for processing and analyzing bank transaction data.",
+                "title": "Account Information Workflow",
+                "description": "Automated pipeline for ingesting, processing, and analyzing account information data.",
                 "datasets": {
-                    "source": "Bank API",
-                    "source_name": "bank_transactions.csv"
+                    "source": "Banking System",
+                    "source_name": "account_information.csv"
                 },
                 "streaming": false,
-                "last_run": "April 12, 2024"
+                "last_run": "April 15, 2024"
             },
-            "quality_score": "78%",
-            "completeness": "90%",
-            "recency": "Daily",
-            "frequency": "Real-time",
+            "quality_score": "95%",
+            "completeness": "98%",
+            "recency": "Real-time",
+            "frequency": "Continuous",
+            "schema": [
+                {"title": "account_id", "data_type": "string"},
+                {"title": "account_type", "data_type": "string"},
+                {"title": "balance", "data_type": "double"},
+                {"title": "currency", "data_type": "string"},
+                {"title": "open_date", "data_type": "date"},
+                {"title": "last_transaction_date", "data_type": "date"}
+            ]
+        },
+        "transaction_history": {
+            "title": "Transaction History",
+            "description": "Detailed transaction history including date, amount, type, and category.",
+            "version": "v2.3",
+            "version_date": "April 12, 2024",
+            "workflow": {
+                "title": "Transaction History Workflow",
+                "description": "Automated pipeline for ingesting, processing, and analyzing transaction history data.",
+                "datasets": {
+                    "source": "Banking System",
+                    "source_name": "transaction_history.csv"
+                },
+                "streaming": false,
+                "last_run": "April 15, 2024"
+            },
+            "quality_score": "92%",
+            "completeness": "97%",
+            "recency": "Real-time",
+            "frequency": "Continuous",
             "schema": [
                 {"title": "transaction_id", "data_type": "string"},
                 {"title": "account_id", "data_type": "string"},
-                {"title": "transaction_date", "data_type": "timestamp"},
-                {"title": "transaction_type", "data_type": "string"},
+                {"title": "transaction_date", "data_type": "date"},
                 {"title": "amount", "data_type": "double"},
-                {"title": "currency", "data_type": "string"}
+                {"title": "transaction_type", "data_type": "string"},
+                {"title": "category", "data_type": "string"},
+                {"title": "description", "data_type": "string"}
             ]
         },
         "investment_portfolio": {
             "title": "Investment Portfolio",
-            "description": "Stores information about investment portfolios, including asset allocation, holdings, and market values.",
-            "version": "v1.5",
-            "version_date": "April 13, 2024",
+            "description": "Overview of investment portfolio including holdings, asset allocation, and performance.",
+            "version": "v1.8",
+            "version_date": "April 8, 2024",
             "workflow": {
                 "title": "Investment Portfolio Workflow",
-                "description": "Automated workflow for processing and managing investment portfolio data.",
+                "description": "Automated pipeline for ingesting, processing, and analyzing investment portfolio data.",
                 "datasets": {
-                    "source": "Investment API",
+                    "source": "Investment Management System",
                     "source_name": "investment_portfolio.csv"
                 },
                 "streaming": false,
-                "last_run": "April 14, 2024"
+                "last_run": "April 15, 2024"
             },
-            "quality_score": "80%",
-            "completeness": "85%",
+            "quality_score": "88%",
+            "completeness": "95%",
             "recency": "Daily",
-            "frequency": "Real-time",
+            "frequency": "Continuous",
             "schema": [
-                {"title": "portfolio_id", "data_type": "string"},
-                {"title": "asset_id", "data_type": "string"},
+                {"title": "investment_id", "data_type": "string"},
                 {"title": "asset_name", "data_type": "string"},
-                {"title": "quantity", "data_type": "double"},
-                {"title": "market_value", "data_type": "double"},
-                {"title": "currency", "data_type": "string"}
+                {"title": "asset_type", "data_type": "string"},
+                {"title": "quantity", "data_type": "int"},
+                {"title": "value", "data_type": "double"},
+                {"title": "allocation_percentage", "data_type": "double"},
+                {"title": "valuation_date", "data_type": "date"}
             ]
         }
     },
     "lens": {
         "name": "Finance Insights Lens",
-        "description": "Provides insights into financial transactions and investment performance.",
-        "stack": ["Spark", "Python", "SQL"],
+        "description": "Provides insights into financial behavior, investment trends, and portfolio performance.",
+        "stack": ["Python", "SQL", "Power BI"],
         "tags": ["insights", "analytics"],
-        "published": "April 15, 2024",
-        "updated_at": "April 15, 2024",
-        "version": "v1.0",
+        "published": "April 20, 2024",
+        "updated_at": "April 25, 2024",
+        "version": "v2.1",
         "entities": {
-            "entity_1": "Bank Transactions",
-            "entity_2": "Investment Portfolio"
+            "entity_1": "Account Summaries",
+            "entity_2": "Transaction Analytics",
+            "entity_3": "Investment Performance"
         }
     },
-    "system_requirements_and_dependencies": {
-        "compute_cluster": {
-            "title": "Compute Cluster",
-            "description": "Utilized for large-scale data processing and analytics tasks.",
-            "details": {
-                "type": "Apache Spark",
-                "number_of_nodes": 5,
-                "node_type": "High-memory instances",
-                "total_cpu_cores": 80,
-                "total_ram": "320 GB"
+    "System_Requirements_and_Dependencies": {
+        "Compute_Cluster": {
+            "Title": "Compute Cluster",
+            "Description": "Utilized for large-scale data processing and analysis.",
+            "Details": {
+                "Type": "High-performance computing cluster",
+                "Number_of_Nodes": 5,
+                "Node_Type": "Instance type with high CPU and RAM",
+                "Total_CPU_Cores": 100,
+                "Total_RAM": "500 GB"
             }
         },
-        "message_broker": {
-            "title": "Message Broker",
-            "description": "Facilitates real-time data streaming and event processing.",
-            "details": {
-                "type": "Apache Kafka",
-                "number_of_brokers": 3,
-                "broker_instance_type": "Instance type with at least 8 CPU cores and 32 GB RAM per broker",
-                "total_cpu_cores": 24,
-                "total_ram": "96 GB"
+        "Streaming_Cluster": {
+            "Title": "Streaming Cluster",
+            "Description": "Used for real-time data processing and streaming analytics.",
+            "Details": {
+                "Number_of_Brokers": 3,
+                "Broker_Instance_Type": "Instance type optimized for streaming workloads",
+                "Total_CPU_Cores": 24,
+                "Total_RAM": "128 GB"
+            }
+        },
+        "Database_Storage": {
+            "Title": "Database Storage",
+            "Description": "Utilized for storing enriched and processed data.",
+            "Details": {
+                "Type": "Distributed database",
+                "Instance_Type": "High-performance instance",
+                "CPU_Cores": "At least 8",
+                "RAM": "At least 64 GB",
+                "Storage": "Scalable storage capacity"
             }
         }
     },
-    "built_using": {
-        "python": {
-            "title": "Python",
-            "description": "Utilized for data processing, analysis, and scripting tasks."
+    "Built_Using": {
+        "Python": {
+            "Title": "Python",
+            "Description": "For data processing, analysis, and modeling tasks."
         },
-        "spark": {
-            "title": "Apache Spark",
-            "description": "Used for distributed data processing and analytics at scale."
+        "SQL": {
+            "Title": "SQL",
+            "Description": "For querying and managing relational databases."
         },
-        "kafka": {
-            "title": "Apache Kafka",
-            "description": "Deployed for real-time data streaming and event-driven architectures."
+        "Power_BI": {
+            "Title": "Power BI",
+            "Description": "For creating interactive visualizations and reports."
         }
     },
-    "technical_specifications": {
-        "title": "Finance 360 Lens",
-        "description": "Empowers financial institutions with comprehensive insights for informed decision-making.",
-        "features": {
-            "investment_analysis": "Perform detailed analysis of investment portfolios to optimize returns and manage risks.",
-            "transaction_monitoring": "Monitor financial transactions in real-time to detect anomalies and fraudulent activities."
+    "TechnicalSpecifications": {
+        "Title": "Finance 360 Lens",
+        "Description": "Empowers users with comprehensive insights into financial data.",
+        "Features": {
+            "Real-time Monitoring": "Monitor financial transactions and account activities in real-time.",
+            "Portfolio Analysis": "Analyze investment portfolio performance and asset allocation.",
+            "Transaction Trends": "Identify patterns and trends in transaction history for actionable insights."
         }
     },
-    "use_cases_and_scenarios": {
-        "investment_management": {
-            "title": "Investment Management",
-            "description": "Optimize investment portfolios and asset allocations to maximize returns while managing risks."
+    "GovernancePoliciesAndStewardship": {
+        "Title": "Governance Policies and Stewardship",
+        "Description": "Establishing policies and roles for effective data governance and stewardship.",
+        "AccessControl": {
+            "RoleBasedAccess": "Granting access based on roles to maintain data security.",
+            "DiscretionaryAccess": "Implementing discretionary access control and encryption for sensitive data."
         },
-        "risk_analysis": {
-            "title": "Risk Analysis",
-            "description": "Identify, assess, and mitigate financial risks to protect assets and ensure business continuity."
+        "StewardResponsibilities": {
+            "Title": "Steward Responsibilities",
+            "Description": "Defining roles and responsibilities for data ownership and stewardship.",
+            "Responsibilities": [
+                "Data Quality Assurance",
+                "Privacy Compliance",
+                "Regulatory Adherence"
+            ]
         }
+    },
+    "DataQualityAndGovernance": {
+        "Title": "Data Quality Management",
+        "Description": "Ensuring high-quality data through rigorous measures and adherence to standards.",
+        "Approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and reliability.",
+        "AuditsAndFeedback": "Regular audits and feedback mechanisms to continuously enhance data quality and integrity."
+    },
+    "CleansingAndPreprocessing": {
+        "Title": "Data Cleansing and Preprocessing",
+        "Description": "Thorough cleaning and preprocessing procedures to ensure data accuracy and consistency.",
+        "Processes": [
+            "Addressing missing or inconsistent values",
+            "Standardization and normalization",
+            "Deduplication",
+            "Outlier detection and removal"
+        ]
+    },
+    "UseCasesAndScenarios": {
+        "FinancialAnalysis": [
+            {
+                "Title": "Expense Tracking",
+                "Description": "Analyze spending patterns and track expenses over time for budgeting and financial planning."
+            },
+            {
+                "Title": "Risk Assessment",
+                "Description": "Assess investment risks and identify potential opportunities for optimizing portfolio performance."
+            },
+            {
+                "Title": "Fraud Detection",
+                "Description": "Leverage transaction analytics to detect and prevent fraudulent activities in real-time."
+            },
+            {
+                "Title": "Customer Segmentation",
+                "Description": "Segment customers based on financial behavior and preferences for targeted marketing and personalized services."
+            }
+        ]
     }
 }

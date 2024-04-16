@@ -1,228 +1,229 @@
 {
     "title": "Healthcare_360",
-    "description": "Comprehensive healthcare data integration platform for a unified view of patient records and medical information.",
-    "owner": "Dr. Amanda Rodriguez",
-    "version": "v1.0",
-    "version_date": "October 24, 2023 09:30",
-    "tags": ["healthcare", "patient_records", "medical_data"],
+    "description": "Healthcare data platform aggregating information from various sources for a comprehensive view of patient health.",
+    "owners": ["Dr. Emily Johnson", "Dr. Michael Smith"],
+    "version": "v2.0",
+    "version_date": "April 15, 2024",
+    "tags": ["healthcare", "medical", "patient"],
     "health": {
-        "quality_score": "85%",
-        "operational_health": "90%"
+        "quality_score": "92%",
+        "operational_health": "96%",
+        "data_freshness": "Real-time",
+        "data_coverage": "Comprehensive"
     },
-    "data_sources": [
-        {
-            "title": "patient_records",
-            "description": "Contains comprehensive patient information, including medical history, diagnoses, treatments, and personal details.",
-            "version": "v1.2",
-            "version_date": "October 22, 2023",
-            "quality_score": "88%",
+    "data_sources": {
+        "patient_records": {
+            "title": "Patient Records",
+            "description": "Detailed patient records including medical history, diagnoses, treatments, and medications.",
+            "version": "v2.5",
+            "version_date": "April 10, 2024",
+            "workflow": {
+                "title": "Patient Records Workflow",
+                "description": "Automated pipeline for ingesting, processing, and analyzing patient records data.",
+                "datasets": {
+                    "source": "Healthcare Information System",
+                    "source_name": "patient_records.csv"
+                },
+                "streaming": false,
+                "last_run": "April 15, 2024"
+            },
+            "quality_score": "96%",
+            "completeness": "98%",
+            "recency": "Real-time",
+            "frequency": "Continuous",
+            "schema": [
+                {"title": "patient_id", "data_type": "string"},
+                {"title": "patient_name", "data_type": "string"},
+                {"title": "date_of_birth", "data_type": "date"},
+                {"title": "gender", "data_type": "string"},
+                {"title": "blood_type", "data_type": "string"},
+                {"title": "allergies", "data_type": "string"},
+                {"title": "medical_conditions", "data_type": "string"},
+                {"title": "medications", "data_type": "string"},
+                {"title": "last_visit_date", "data_type": "date"}
+            ]
+        },
+        "diagnostic_tests": {
+            "title": "Diagnostic Tests",
+            "description": "Results of diagnostic tests including lab tests, imaging, and other medical tests.",
+            "version": "v2.3",
+            "version_date": "April 12, 2024",
+            "workflow": {
+                "title": "Diagnostic Tests Workflow",
+                "description": "Automated pipeline for ingesting, processing, and analyzing diagnostic tests data.",
+                "datasets": {
+                    "source": "Healthcare Information System",
+                    "source_name": "diagnostic_tests.csv"
+                },
+                "streaming": false,
+                "last_run": "April 15, 2024"
+            },
+            "quality_score": "94%",
+            "completeness": "97%",
+            "recency": "Real-time",
+            "frequency": "Continuous",
+            "schema": [
+                {"title": "test_id", "data_type": "string"},
+                {"title": "patient_id", "data_type": "string"},
+                {"title": "test_date", "data_type": "date"},
+                {"title": "test_type", "data_type": "string"},
+                {"title": "result", "data_type": "string"},
+                {"title": "unit", "data_type": "string"},
+                {"title": "reference_range", "data_type": "string"},
+                {"title": "interpretation", "data_type": "string"}
+            ]
+        },
+        "appointments": {
+            "title": "Appointments",
+            "description": "Scheduled appointments including visit type, physician, and appointment status.",
+            "version": "v1.8",
+            "version_date": "April 8, 2024",
+            "workflow": {
+                "title": "Appointments Workflow",
+                "description": "Automated pipeline for ingesting, processing, and analyzing appointment data.",
+                "datasets": {
+                    "source": "Healthcare Information System",
+                    "source_name": "appointments.csv"
+                },
+                "streaming": false,
+                "last_run": "April 15, 2024"
+            },
+            "quality_score": "90%",
             "completeness": "95%",
             "recency": "Daily",
-            "frequency": "Real-time",
+            "frequency": "Continuous",
             "schema": [
-                {
-                    "title": "patient_id",
-                    "data_type": "string"
-                },
-                {
-                    "title": "first_name",
-                    "data_type": "string"
-                },
-                {
-                    "title": "last_name",
-                    "data_type": "string"
-                },
-                {
-                    "title": "gender",
-                    "data_type": "string"
-                },
-                {
-                    "title": "dob",
-                    "data_type": "timestamp"
-                },
-                {
-                    "title": "blood_type",
-                    "data_type": "string"
-                },
-                {
-                    "title": "allergies",
-                    "data_type": "string"
-                },
-                {
-                    "title": "conditions",
-                    "data_type": "string"
-                },
-                {
-                    "title": "medications",
-                    "data_type": "string"
-                },
-                {
-                    "title": "insurance_provider",
-                    "data_type": "string"
-                },
-                {
-                    "title": "primary_doctor",
-                    "data_type": "string"
-                },
-                {
-                    "title": "contact_details",
-                    "data_type": "string"
-                }
+                {"title": "appointment_id", "data_type": "string"},
+                {"title": "patient_id", "data_type": "string"},
+                {"title": "physician_id", "data_type": "string"},
+                {"title": "visit_date", "data_type": "date"},
+                {"title": "visit_type", "data_type": "string"},
+                {"title": "status", "data_type": "string"}
             ]
-        },
-        {
-            "title": "medical_procedures",
-            "description": "Provides data on medical procedures, including procedure codes, descriptions, and associated healthcare professionals.",
-            "version": "v1.0",
-            "version_date": "October 20, 2023",
-            "quality_score": "82%",
-            "completeness": "90%",
-            "recency": "Weekly",
-            "frequency": "Real-time",
-            "schema": [
-                {
-                    "title": "procedure_id",
-                    "data_type": "string"
-                },
-                {
-                    "title": "patient_id",
-                    "data_type": "string"
-                },
-                {
-                    "title": "procedure_date",
-                    "data_type": "timestamp"
-                },
-                {
-                    "title": "procedure_code",
-                    "data_type": "string"
-                },
-                {
-                    "title": "procedure_description",
-                    "data_type": "string"
-                },
-                {
-                    "title": "performing_doctor",
-                    "data_type": "string"
-                },
-                {
-                    "title": "department",
-                    "data_type": "string"
-                },
-                {
-                    "title": "hospital",
-                    "data_type": "string"
-                }
-            ]
-        },
-        {
-            "title": "healthcare_providers",
-            "description": "Contains information about healthcare providers, including names, specialties, and contact details.",
-            "version": "v1.1",
-            "version_date": "October 23, 2023",
-            "quality_score": "90%",
-            "completeness": "97%",
-            "recency": "Daily",
-            "frequency": "Real-time",
-            "schema": [
-                {
-                    "title": "provider_id",
-                    "data_type": "string"
-                },
-                {
-                    "title": "name",
-                    "data_type": "string"
-                },
-                {
-                    "title": "specialty",
-                    "data_type": "string"
-                },
-                {
-                    "title": "contact_details",
-                    "data_type": "string"
-                },
-                {
-                    "title": "hospital_affiliation",
-                    "data_type": "string"
-                }
-            ]
-        },
-        {
-            "title": "billing_records",
-            "description": "Holds billing and insurance information, including billing codes, insurance claims, and payment records.",
-            "version": "v1.0",
-            "version_date": "October 25, 2023",
-            "quality_score": "86%",
-            "completeness": "92%",
-            "recency": "Daily",
-            "frequency": "Real-time",
-            "schema": [
-                {
-                    "title": "transaction_id",
-                    "data_type": "string"
-                },
-                {
-                    "title": "patient_id",
-                    "data_type": "string"
-                },
-                {
-                    "title": "billing_date",
-                    "data_type": "timestamp"
-                },
-                {
-                    "title": "billing_code",
-                    "data_type": "string"
-                },
-                {
-                    "title": "amount",
-                    "data_type": "double"
-                },
-                {
-                    "title": "insurance_claim",
-                    "data_type": "string"
-                },
-                {
-                    "title": "payment_status",
-                    "data_type": "string"
-                }
-            ]
-        }
-    ],
-    "technical_specifications": {
-        "Interoperability": {
-            "description": "Facilitates seamless data exchange between different healthcare systems and applications.",
-            "standards": ["HL7 FHIR"]
-        },
-        "Secure Data Sharing": {
-            "description": "Ensures secure and compliant sharing of healthcare data among authorized users and systems."
-        },
-        "Advanced Analytics": {
-            "description": "Utilizes advanced analytical techniques to derive insights from healthcare data for better decision-making."
-        },
-        "Electronic Health Record (EHR) Integration": {
-            "description": "Integrates with electronic health record systems to provide a comprehensive view of patient health information."
         }
     },
-    "governance_policies_and_stewardship": {
-        "description": "Establishes policies and roles for effective data governance and stewardship."
-    },
-    "data_quality_and_governance": {
-        "quality_measures_and_standards": {
-            "description": "Ensures high-quality healthcare data through rigorous measures and adherence to standards.",
-            "approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and confidentiality."
+    "lens": {
+        "name": "Health Insights Lens",
+        "description": "Provides insights into patient health trends, treatment outcomes, and healthcare utilization.",
+        "stack": ["Python", "SQL", "Tableau"],
+        "tags": ["insights", "analytics"],
+        "published": "April 20, 2024",
+        "updated_at": "April 25, 2024",
+        "version": "v2.1",
+        "entities": {
+            "entity_1": "Patient Health Profiles",
+            "entity_2": "Diagnostic Trends",
+            "entity_3": "Appointment Analytics"
         }
     },
-    "use_cases_and_scenarios": {
-        "Patient_Care_Optimization": {
-            "description": "Healthcare professionals can access a comprehensive view of patient history, diagnoses, and treatments, leading to more personalized and effective care."
+    "System_Requirements_and_Dependencies": {
+        "Compute_Cluster": {
+            "Title": "Compute Cluster",
+            "Description": "Utilized for large-scale data processing and analysis.",
+            "Details": {
+                "Type": "High-performance computing cluster",
+                "Number_of_Nodes": 5,
+                "Node_Type": "Instance type with high CPU and RAM",
+                "Total_CPU_Cores": 100,
+                "Total_RAM": "500 GB"
+            }
         },
-        "Operational_Efficiency": {
-            "description": "The platform streamlines administrative processes, reducing paperwork and enhancing the overall efficiency of healthcare institutions."
+        "Streaming_Cluster": {
+            "Title": "Streaming Cluster",
+            "Description": "Used for real-time data processing and streaming analytics.",
+            "Details": {
+                "Number_of_Brokers": 3,
+                "Broker_Instance_Type": "Instance type optimized for streaming workloads",
+                "Total_CPU_Cores": 24,
+                "Total_RAM": "128 GB"
+            }
         },
-        "Medical_Research": {
-            "description": "Researchers can leverage aggregated data for medical studies, clinical trials, and epidemiological research."
-        },
-        "Regulatory_Compliance": {
-            "description": "Ensures adherence to healthcare data privacy regulations and provides robust access controls for sensitive patient information."
+        "Database_Storage": {
+            "Title": "Database Storage",
+            "Description": "Utilized for storing enriched and processed data.",
+            "Details": {
+                "Type": "Distributed database",
+                "Instance_Type": "High-performance instance",
+                "CPU_Cores": "At least 8",
+                "RAM": "At least 64 GB",
+                "Storage": "Scalable storage capacity"
+            }
         }
+    },
+    "Built_Using": {
+        "Python": {
+            "Title": "Python",
+            "Description": "For data processing, analysis, and modeling tasks."
+        },
+        "SQL": {
+            "Title": "SQL",
+            "Description": "For querying and managing relational databases."
+        },
+        "Tableau": {
+            "Title": "Tableau",
+            "Description": "For visualizing and exploring healthcare analytics."
+        }
+    },
+    "TechnicalSpecifications": {
+        "Title": "Healthcare 360 Lens",
+        "Description": "Empowers healthcare providers with comprehensive patient insights.",
+        "Features": {
+            "Real-time Monitoring": "Monitor patient health data in real-time for proactive interventions.",
+            "Patient Segmentation": "Segment patients based on medical conditions and treatment history for personalized care.",
+            "Treatment Outcomes Analysis": "Evaluate treatment effectiveness and patient outcomes to optimize care pathways."
+        }
+    },
+    "GovernancePoliciesAndStewardship": {
+        "Title": "Governance Policies and Stewardship",
+        "Description": "Establishing policies and roles for effective data governance and stewardship.",
+        "AccessControl": {
+            "RoleBasedAccess": "Granting access based on roles to maintain data security.",
+            "DiscretionaryAccess": "Implementing discretionary access control and encryption for sensitive patient data."
+        },
+        "StewardResponsibilities": {
+            "Title": "Steward Responsibilities",
+            "Description": "Defining roles and responsibilities for data ownership and stewardship.",
+            "Responsibilities": [
+                "Data Quality Assurance",
+                "Privacy Compliance",
+                "Regulatory Adherence"
+            ]
+        }
+    },
+    "DataQualityAndGovernance": {
+        "Title": "Data Quality Management",
+        "Description": "Ensuring high-quality patient data through rigorous measures and adherence to standards.",
+        "Approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and reliability.",
+        "AuditsAndFeedback": "Regular audits and feedback mechanisms to continuously enhance data quality and integrity."
+    },
+    "CleansingAndPreprocessing": {
+        "Title": "Data Cleansing and Preprocessing",
+        "Description": "Thorough cleaning and preprocessing procedures to ensure data accuracy and consistency.",
+        "Processes": [
+            "Addressing missing or inconsistent values",
+            "Standardization and normalization",
+            "Deduplication",
+            "Outlier detection and removal"
+        ]
+    },
+    "UseCasesAndScenarios": {
+        "PatientCare": [
+            {
+                "Title": "Chronic Disease Management",
+                "Description": "Monitor and manage chronic conditions through continuous patient monitoring and personalized care plans."
+            },
+            {
+                "Title": "Preventive Care",
+                "Description": "Promote preventive healthcare measures through early detection and intervention strategies."
+            },
+            {
+                "Title": "Population Health Analytics",
+                "Description": "Analyze population health trends and risk factors to improve community health outcomes."
+            },
+            {
+                "Title": "Clinical Research",
+                "Description": "Conduct clinical studies and research using aggregated patient data for medical advancements."
+            }
+        ]
     }
 }
