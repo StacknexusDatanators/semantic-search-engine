@@ -321,7 +321,7 @@
             "Total_RAM": "192 GB"
           }
         },
-        "Apache_Kafka_Cluster": {
+        "Streaming_Cluster": {
           "Title": "Apache Kafka Cluster",
           "Description": "Employed Apache Kafka for real-time streaming of events.",
           "Details": {
@@ -331,7 +331,7 @@
             "Total_RAM": "96 GB"
           }
         },
-        "PostgreSQL_Database": {
+        "Database Storage": {
           "Title": "PostgreSQL Database",
           "Description": "Utilized PostgreSQL as the primary database for storing enriched data.",
           "Details": {
@@ -361,7 +361,6 @@
         }
       },
       "TechnicalSpecifications": {
-        "Customer 360 Lens": {
           "Title": "Customer 360 Lens",
           "Description": "Empowers businesses with comprehensive customer insights.",
           "Features": {
@@ -459,7 +458,6 @@
               { "Attribute": "segment_name", "Description": "Name of the audience segment" },
               { "Attribute": "customer_id", "Description": "Unique identifier of the customer" }
             ]
-          }
         }
       },
       "GovernancePoliciesAndStewardship": {
@@ -479,13 +477,11 @@
         }
       },
       "DataQualityAndGovernance": {
-        "QualityMeasuresAndStandards": {
           "Title": "Quality Measures and Standards",
           "Description": "Ensuring high-quality data through rigorous measures and adherence to standards.",
           "Approach": "Comprehensive assessment across dimensions such as accuracy, completeness, timeliness, consistency, and uniqueness.",
           "AuditsAndFeedback": "Regular audits and feedback mechanisms to continuously enhance data quality."
-        }
-      },
+        },
       "CleansingAndPreprocessing": {
         "Title": "Cleansing and Preprocessing",
         "Description": "Thorough cleaning and preprocessing procedures to ensure data integrity.",
