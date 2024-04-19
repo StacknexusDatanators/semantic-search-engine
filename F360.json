@@ -1,0 +1,66 @@
+{
+    "title": "Finance_360",
+    "description": "Finance 360 Data Product provides a comprehensive view of financial data by integrating information from various sources. It empowers organizations to gain deep insights into financial transactions, market trends, and investment opportunities, facilitating better financial decision-making and risk management. This solution empowers businesses to understand their financial health, optimize investment strategies, enhance compliance, and achieve long-term financial goals.",
+    "tags": ["finance", "financial_analysis"],
+    "purpose_and_objective": "The primary goal of the Finance 360 Data Product is to equip organizations with actionable insights into their financial data, enabling better financial decision-making, risk management, and compliance. By integrating data from diverse sources and leveraging advanced analytics, including financial modeling and market trend analysis, the product aims to provide holistic financial insights for informed decision-making.",
+    "target_audience": "The Finance 360 Data Product is designed for professionals involved in finance, accounting, investment analysis, and risk management, including financial analysts, investment managers, auditors, and compliance officers. It caters to individuals seeking to derive actionable insights for financial analysis, investment optimization, risk assessment, and compliance monitoring, leveraging advanced analytical techniques such as financial modeling and market trend analysis.",
+    "datasets": {
+        "table": [
+            {
+                "title": "transactions",
+                "description": "Contains transactional data, including transaction_id, amount, timestamp, and other relevant attributes.",
+                "version": "v1.0",
+                "version_date": "March 15, 2024",
+                "quality_score": "85%",
+                "completeness": "98%",
+                "recency": "Hourly",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "market_data",
+                "description": "Contains market data, including stock prices, indices, and other financial indicators.",
+                "version": "v1.0",
+                "version_date": "March 20, 2024",
+                "quality_score": "80%",
+                "completeness": "95%",
+                "recency": "Hourly",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "investment_portfolio",
+                "description": "Contains information about investment portfolios, including asset allocation, holdings, and performance metrics.",
+                "version": "v1.0",
+                "version_date": "March 25, 2024",
+                "quality_score": "90%",
+                "completeness": "97%",
+                "recency": "Daily",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "financial_reports",
+                "description": "Contains financial reports, including balance sheets, income statements, and cash flow statements.",
+                "version": "v1.0",
+                "version_date": "April 1, 2024",
+                "quality_score": "88%",
+                "completeness": "96%",
+                "recency": "Monthly",
+                "frequency": "Real-time"
+            }
+        ]
+    },
+    "lens": [
+        {
+            "name": "Financial Insights Lens",
+            "description": "Provides insights into financial trends and investment opportunities.",
+            "stack": ["spark", "python", "SQL"],
+            "tags": ["insights", "financial_analysis"],
+            "published": "October 1, 2024",
+            "updated_at": "November 20, 2024",
+            "version": "v1.0",
+            "entities": {
+                "entity_1": "Investment Portfolios",
+                "entity_2": "Market Trends"
+            }
+        }
+    ]
+}

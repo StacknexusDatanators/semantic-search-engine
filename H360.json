@@ -1,0 +1,66 @@
+{
+    "title": "Healthcare_360",
+    "description": "Healthcare 360 Data Product provides a comprehensive view of patient data by integrating information from various sources. It empowers healthcare organizations to gain deep insights into patient health, medical history, and treatment outcomes, enabling better patient care, clinical decision-making, and population health management. This solution empowers healthcare providers to understand their patient populations better, optimize treatment strategies, enhance healthcare delivery, and improve overall health outcomes.",
+    "tags": ["healthcare", "population_health"],
+    "purpose_and_objective": "The primary goal of the Healthcare 360 Data Product is to equip healthcare organizations with actionable insights into patient data, facilitating better patient care, clinical decision-making, and population health management. By integrating data from diverse sources, including electronic health records (EHRs) and medical devices, and leveraging advanced analytics, such as predictive modeling and patient risk stratification, the product aims to provide holistic healthcare insights for informed decision-making.",
+    "target_audience": "The Healthcare 360 Data Product is designed for healthcare professionals involved in patient care, clinical research, healthcare administration, and population health management, including physicians, nurses, healthcare administrators, and public health officials. It caters to individuals seeking to derive actionable insights for patient care optimization, treatment planning, resource allocation, and population health management, leveraging advanced analytical techniques such as predictive modeling and patient risk stratification.",
+    "datasets": {
+        "table": [
+            {
+                "title": "patient_records",
+                "description": "Contains patient health records, including demographics, medical history, diagnoses, and treatment details.",
+                "version": "v1.0",
+                "version_date": "June 15, 2024",
+                "quality_score": "90%",
+                "completeness": "97%",
+                "recency": "Hourly",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "clinical_notes",
+                "description": "Contains clinical notes, including physician observations, patient symptoms, and treatment plans.",
+                "version": "v1.0",
+                "version_date": "June 20, 2024",
+                "quality_score": "85%",
+                "completeness": "95%",
+                "recency": "Hourly",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "medical_images",
+                "description": "Contains medical images, including X-rays, MRIs, and CT scans, for diagnostic purposes.",
+                "version": "v1.0",
+                "version_date": "June 25, 2024",
+                "quality_score": "88%",
+                "completeness": "96%",
+                "recency": "Daily",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "health_outcomes",
+                "description": "Contains health outcomes data, including patient outcomes, readmission rates, and mortality rates.",
+                "version": "v1.0",
+                "version_date": "July 1, 2024",
+                "quality_score": "92%",
+                "completeness": "98%",
+                "recency": "Monthly",
+                "frequency": "Real-time"
+            }
+        ]
+    },
+    "lens": [
+        {
+            "name": "Clinical Insights Lens",
+            "description": "Provides insights into patient health trends and treatment effectiveness.",
+            "stack": ["spark", "python", "SQL"],
+            "tags": ["insights", "clinical_analytics"],
+            "published": "October 1, 2024",
+            "updated_at": "November 20, 2024",
+            "version": "v1.0",
+            "entities": {
+                "entity_1": "Patient Health Records",
+                "entity_2": "Clinical Interventions"
+            }
+        }
+    ]
+}
