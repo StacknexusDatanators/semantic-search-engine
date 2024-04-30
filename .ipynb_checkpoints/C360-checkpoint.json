@@ -1,0 +1,66 @@
+{
+    "title": "Customer_360",
+    "description": "Customer 360 Data Product provides a comprehensive view of customers by integrating data from various sources. It empowers organizations with deep insights into customer behavior, preferences, and interactions, enabling better customer churn prediction and customer profiling. This solution enables businesses to understand their customers better, optimize marketing strategies, enhance operational efficiency, and foster long-term customer relationships.",
+    "tags": ["marketing", "customer_360"],
+    "purpose_and_objective": "The primary goal of the Customer 360 Data Product is to equip organizations with actionable insights into their customer base, facilitating better customer engagement, optimized marketing strategies, enhanced operational efficiency, and improved customer retention. By leveraging advanced analytics, including customer churn prediction and customer profiling, the product aims to provide holistic customer insights for informed decision-making.",
+    "target_audience": "The Customer 360 Data Product is designed for a wide range of professionals involved in data analysis, engineering, and science, including business analysts, data engineers, and data scientists. It caters to individuals seeking to derive actionable insights for customer engagement, marketing optimization, operational efficiency, and customer retention, leveraging advanced analytics techniques such as customer churn prediction and customer profiling.",
+    "datasets": {
+        "table": [
+            {
+                "title": "customers",
+                "description": "Contains customer information, including customer_index, name, contact details, and other relevant attributes.",
+                "version": "v2.0",
+                "version_date": "July 15, 2023",
+                "quality_score": "78%",
+                "completeness": "95%",
+                "recency": "Daily",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "clickstream",
+                "description": "Contains clickstream information, including sessionid, clientid, product details, and other relevant attributes.",
+                "version": "v3.0",
+                "version_date": "August 20, 2023",
+                "quality_score": "73%",
+                "completeness": "97%",
+                "recency": "Daily",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "order_line_item",
+                "description": "Contains order line item information, including orderid, order datetime, and other relevant attributes.",
+                "version": "v2.0",
+                "version_date": "August 28, 2023",
+                "quality_score": "76%",
+                "completeness": "92%",
+                "recency": "Daily",
+                "frequency": "Real-time"
+            },
+            {
+                "title": "product_details",
+                "description": "Contains products detailed information, including sku_id, product category, model name, and other relevant attributes.",
+                "version": "v3.0",
+                "version_date": "July 28, 2023",
+                "quality_score": "81%",
+                "completeness": "92%",
+                "recency": "Daily",
+                "frequency": "Real-time"
+            }
+        ]
+    },
+    "lens": [
+        {
+            "name": "Customer Insights Lens",
+            "description": "Provides insights into customer behavior and preferences.",
+            "stack": ["spark", "python", "SQL"],
+            "tags": ["insights", "analytics"],
+            "published": "October 1, 2023",
+            "updated_at": "November 20, 2023",
+            "version": "v1.2",
+            "entities": {
+                "entity_1": "Customer Profiles",
+                "entity_2": "Purchase History"
+            }
+        }
+    ]
+}
